@@ -28,6 +28,16 @@ public class CashbackHackServiceTest {
     }
 
     @Test
+    public void shouldSuggest0IfTheAmountIsAMultipleOfTheBoundary() {
+
+        int actual = service.remain(7000);
+        int expected = 0;
+
+        Assert.assertEquals(actual, expected);
+
+    }
+
+    @Test
     public void shouldSuggest999IfAmountMore1000() {
 
         int actual = service.remain(1001);
